@@ -15,3 +15,12 @@
       apt:
         name: nginx
         state: latest
+
+- hosts: slave3
+  become: yes
+  name: Install the apache2
+  tasks:
+    - name: Install the apache2
+      apt: 
+        name: apache2
+        state: latest
